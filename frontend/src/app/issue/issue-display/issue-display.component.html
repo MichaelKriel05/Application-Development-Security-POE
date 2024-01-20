@@ -1,0 +1,12 @@
+<div class="issue-list">
+    <div class="issue-item" *ngFor="let issue of issues">
+      <div class="issue-details">
+        <h4 class="issue-title">{{ issue.title }}</h4>
+        <p class="issue-description">{{ issue.description }}</p>
+      </div>
+      <div class="issue-actions">
+        <button class="btn btn-danger" (click)="ondelete(issue._id)">Delete Issue</button>
+      </div>
+    </div>
+  </div>
+  

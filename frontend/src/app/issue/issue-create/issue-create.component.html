@@ -1,0 +1,31 @@
+<form (submit)="onaddIssue(addIssue)" #addIssue="ngForm" class="login-form">
+    <h2>Add New Issue/Post</h2>
+    <div class="form-group">
+      <input
+        type="text"
+        ngModel name="enteredTitle"
+        placeholder="Issue Title"
+        required
+        minlength="1"
+        pattern="^[a-zA-Z0-9\s_-]+$"
+        #enteredID="ngModel"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        ngModel name="enteredDescription"
+        placeholder="Issue Description"
+        required
+        minlength="1"
+        pattern="^[a-zA-Z0-9\s_-]+$"
+        #enteredName="ngModel"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Add Issue</button>
+    </div>
+  </form>
+  
